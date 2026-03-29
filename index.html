@@ -1,13 +1,183 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web-poster_3</title>
-    <link rel="stylesheets" href="stylesheets/style.css">
-    <link rel="JavaScript" href="Javascript/javasctipt.js">
+    <link rel="stylesheet" href="stylesheets/style.css">
 </head>
 <body>
+    <section class="hero">
+        <img src="images/Обложка.png" 
+        alt="ФЛАРА" 
+        class="hero__image" >
+    </section>
+
+<section class="running-line">
+    <div class="running-line__inner">
+        <div class="running-line__group">
+            <span class="running-line__item">ФЛАРА</span>
+            <span class="running-line__item">ФЛАРА</span>
+            <span class="running-line__item">ФЛАРА</span>
+            <span class="running-line__item">ФЛАРА</span>
+            <span class="running-line__item">ФЛАРА</span>
+            <span class="running-line__item">ФЛАРА</span>
+            <span class="running-line__item">ФЛАРА</span>
+            <span class="running-line__item">ФЛАРА</span>
+            <span class="running-line__item">ФЛАРА</span>
+            <span class="running-line__item">ФЛАРА</span>
+            <span class="running-line__item">ФЛАРА</span>
+            <span class="running-line__item">ФЛАРА</span>
+        </div>
+        <div class="running-line__group" aria-hidden="true">
+            <span class="running-line__item">ФЛАРА</span>
+            <span class="running-line__item">ФЛАРА</span>
+            <span class="running-line__item">ФЛАРА</span>
+            <span class="running-line__item">ФЛАРА</span>
+            <span class="running-line__item">ФЛАРА</span>
+            <span class="running-line__item">ФЛАРА</span>
+            <span class="running-line__item">ФЛАРА</span>
+            <span class="running-line__item">ФЛАРА</span>
+            <span class="running-line__item">ФЛАРА</span>
+            <span class="running-line__item">ФЛАРА</span>
+            <span class="running-line__item">ФЛАРА</span>
+            <span class="running-line__item">ФЛАРА</span>
+        </div>
+    </div>
+</section>
+
+<section class="menu-panel">
+    <div class="menu-panel__eyes">
+        <div class="eye">
+            <div class="eye__orbit">
+                <div class="eye__pupil"></div>
+            </div>
+        </div>
     
+        <div class="eye">
+            <div class="eye__orbit">
+                <div class="eye__pupil"></div>
+            </div>
+        </div>
+    </div>
+    <h2 class="menu-panel__title">
+        <span class="menu-panel__title_accent">собери</span> свой цветок
+    </h2>
+
+<div class="flower">
+    <img src="images/flower-logo.png" class="flower__petals" alt="">
+    <img src="images/flower-logo-face.png" class="flower__face" alt="">
+</div>
+</section>
+
+<section class="flower-builder">
+
+    <div class="builder-row" data-part="flower">
+        <button class="builder-arrow builder-arrow_left" type="button">
+            <img src="images/arrow-left.png" alt="">
+        </button>
+
+        <div class="builder-slider">
+            <img class="builder-item builder-item_left" src="" alt="">
+            <img class="builder-item builder-item_center" src="" alt="">
+            <img class="builder-item builder-item_right" src="" alt="">
+        </div>
+
+        <button class="builder-arrow builder-arrow_right" type="button">
+            <img src="images/arrow-right.png" alt="">
+        </button>
+
+        <div class="builder-colors">
+            <button class="builder-color is-active" type="button" data-color="pink"></button>
+            <button class="builder-color" type="button" data-color="blue"></button>
+            <button class="builder-color" type="button" data-color="orange"></button>
+            <button class="builder-color" type="button" data-color="white"></button>
+        </div>
+    </div>
+
+
+    <div class="builder-row" data-part="stem">
+        <button class="builder-arrow builder-arrow_left" type="button">
+            <img src="images/arrow-left.png" alt="">
+        </button>
+
+        <div class="builder-slider">
+            <img class="builder-item builder-item_left" src="" alt="">
+            <img class="builder-item builder-item_center" src="" alt="">
+            <img class="builder-item builder-item_right" src="" alt="">
+        </div>
+
+        <button class="builder-arrow builder-arrow_right" type="button">
+            <img src="images/arrow-right.png" alt="">
+        </button>
+
+        <div class="builder-colors">
+            <button class="builder-color is-active" type="button" data-color="dark-green"></button>
+            <button class="builder-color" type="button" data-color="light-green"></button>
+        </div>
+    </div>
+
+
+    <div class="builder-row" data-part="leaf">
+        <button class="builder-arrow builder-arrow_left" type="button">
+            <img src="images/arrow-left.png" alt="">
+        </button>
+
+        <div class="builder-slider">
+            <img class="builder-item builder-item_left" src="" alt="">
+            <img class="builder-item builder-item_center" src="" alt="">
+            <img class="builder-item builder-item_right" src="" alt="">
+        </div>
+
+        <button class="builder-arrow builder-arrow_right" type="button">
+            <img src="images/arrow-right.png" alt="">
+        </button>
+
+        <div class="builder-colors">
+            <button class="builder-color is-active" type="button" data-color="dark-green"></button>
+            <button class="builder-color" type="button" data-color="light-green"></button>
+        </div>
+    </div>
+
+</section>
+
+<div class="builder-add-wrapper">
+    <button class="builder-add">ДОБАВИТЬ</button>
+</div>
+
+<section class="vine-section">
+    <div class="vine">
+        <img src="images/vine.png" alt="" class="vine__line">
+
+        <img src="images/flower-logo.png" alt="" class="vine__flower vine__flower_1">
+        <img src="images/flower-logo.png" alt="" class="vine__flower vine__flower_2">
+        <img src="images/flower-logo.png" alt="" class="vine__flower vine__flower_3">
+        <img src="images/flower-logo.png" alt="" class="vine__flower vine__flower_4">
+    </div>
+</section>
+
+<section class="flower-collection">
+    <h2 class="flower-collection__title">
+        твоя <span>коллекция</span> цветов
+    </h2>
+
+    <div class="flower-collection__grid"></div>
+
+    <button class="flower-collection__status" type="button" disabled>
+        осталось добавить (6) цветов
+    </button>
+</section>
+
+<section class="vine-section">
+    <div class="vine">
+        <img src="images/vine.png" alt="" class="vine__line">
+
+        <img src="images/flower-logo.png" alt="" class="vine__flower vine__flower_1">
+        <img src="images/flower-logo.png" alt="" class="vine__flower vine__flower_2">
+        <img src="images/flower-logo.png" alt="" class="vine__flower vine__flower_3">
+        <img src="images/flower-logo.png" alt="" class="vine__flower vine__flower_4">
+    </div>
+</section>
+
+    <script src="JavaScript/javascript.js"></script>
 </body>
-</html>

@@ -1,0 +1,570 @@
+@media (max-width: 1023px) and (min-width: 768px) {
+    .menu-panel {
+        padding: 2.5vw 3vw;
+        gap: 2.5vw;
+    }
+
+    .menu-panel__eyes {
+        width: 14vw;
+    }
+
+    .eye {
+        width: 7vw;
+        height: 7vw;
+    }
+
+    .eye+.eye {
+        margin-left: -1vw;
+    }
+
+    .menu-panel__title {
+        font-size: 5vw;
+    }
+
+    .flower {
+        width: 10vw;
+        height: 10vw;
+    }
+
+    .flower__face {
+        font-size: 1.8vw;
+    }
+}
+
+@media (max-width: 767px) {
+    .menu-panel {
+        padding: 3vw 4vw;
+        gap: 3vw;
+    }
+
+    .menu-panel__eyes {
+        width: 18vw;
+    }
+
+    .eye {
+        width: 9vw;
+        height: 9vw;
+    }
+
+    .eye+.eye {
+        margin-left: -1.2vw;
+    }
+
+    .menu-panel__title {
+        font-size: 6vw;
+    }
+
+    .flower {
+        width: 12vw;
+        height: 12vw;
+    }
+
+    .flower__face {
+        font-size: 2.4vw;
+    }
+}
+
+@media (max-width: 767px) {
+    .builder-arrow {
+        display: none;
+    }
+
+    .builder-row {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        row-gap: 1.5vh;
+    }
+
+    .builder-slider {
+        width: 72vw;
+        height: 24vw;
+    }
+
+    .builder-colors {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+    .builder-add {
+        margin-top: 7vh;
+        padding: 2vw 8vw;
+        font-size: 2.6vw;
+    }
+}
+
+@media (max-width: 767px) {
+    .builder-add {
+        padding: 3vw 10vw;
+        font-size: 4vw;
+    }
+}
+
+@media (max-width: 1024px) {
+    .builder-row {
+        grid-template-columns: 10vw 52vw 10vw;
+        column-gap: 3vw;
+    }
+
+    .builder-slider {
+        width: 52vw;
+        height: 18vw;
+        padding: 0 4vw;
+    }
+
+    .builder-item_left,
+    .builder-item_right {
+        width: 6vw;
+        height: 6vw;
+    }
+
+    .builder-item_center {
+        width: 12vw;
+        height: 12vw;
+    }
+
+    .builder-arrow {
+        width: 6vw;
+        height: 6vw;
+    }
+
+    .builder-color {
+        width: 2.2vw;
+        height: 2.2vw;
+    }
+}
+
+@media (max-width: 767px) {
+    .flower-builder {
+        width: 100%;
+        align-items: center;
+        gap: 2.5vh;
+        margin-top: 4vh;
+    }
+
+    .builder-row {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        justify-items: center;
+        row-gap: 1.8vh;
+    }
+
+    .builder-arrow {
+        display: none;
+    }
+
+    .builder-slider {
+        width: 82vw;
+        height: 25vw;
+        padding: 0 6vw;
+        justify-self: center;
+        box-sizing: border-box;
+    }
+
+    .builder-item_left,
+    .builder-item_right {
+        width: 10vw;
+        height: 10vw;
+    }
+
+    .builder-item_center {
+        width: 18vw;
+        height: 18vw;
+    }
+
+    .builder-colors {
+        grid-column: auto;
+        display: flex;
+        justify-content: center;
+        justify-self: center;
+        gap: 2vw;
+    }
+
+    .builder-color {
+        width: 4.5vw;
+        height: 4.5vw;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+    .flower-collection__title {
+        font-size: 3.6vw;
+    }
+
+    .flower-collection__grid {
+        width: 78vw;
+        gap: 2.4vw;
+    }
+
+    .flower-slot {
+        border-radius: 2.2vw;
+    }
+
+    .flower-slot__number {
+        top: 1vw;
+        left: 1vw;
+        width: 3vw;
+        height: 3vw;
+        font-size: 1.8vw;
+    }
+
+    .flower-collection__status {
+        width: 60vw;
+        min-height: 5vw;
+        font-size: 2.3vw;
+    }
+}
+
+@media (max-width: 767px) {
+    .flower-collection__title {
+        font-size: 5.2vw;
+        margin-bottom: 3vh;
+    }
+
+    .flower-collection__grid {
+        width: 86vw;
+        gap: 3vw;
+    }
+
+    .flower-slot {
+        border-radius: 3vw;
+    }
+
+    .flower-slot__number {
+        top: 1.4vw;
+        left: 1.4vw;
+        width: 5vw;
+        height: 5vw;
+        font-size: 3vw;
+    }
+
+    .flower-collection__status {
+        width: 78vw;
+        min-height: 8vw;
+        font-size: 4vw;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+    .flower-collection {
+        margin-top: 7vh;
+    }
+
+    .flower-collection__title {
+        font-size: 4vw;
+        margin-bottom: 3.5vh;
+    }
+
+    .flower-collection__grid {
+        width: 78vw;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3vw;
+    }
+
+    .flower-slot {
+        border-radius: 2.6vw;
+    }
+
+    .flower-slot__number {
+        top: 1vw;
+        left: 1vw;
+        width: 4vw;
+        height: 4vw;
+        font-size: 2.2vw;
+    }
+
+    .flower-collection__status {
+        width: 64vw;
+        min-height: 6vw;
+        margin-top: 3.5vh;
+        font-size: 2.5vw;
+        border-radius: 999px;
+    }
+
+    .saved-flower__stem {
+        width: 12%;
+        bottom: 24%;
+    }
+
+    .saved-flower__bud {
+        width: 28%;
+        bottom: 44%;
+    }
+
+    .saved-flower__pot {
+        width: 42%;
+        bottom: 0;
+    }
+
+    .saved-flower__leaf {
+        width: 24%;
+        bottom: 26%;
+    }
+}
+
+@media (max-width: 767px) {
+    .flower-collection {
+        margin-top: 6vh;
+    }
+
+    .flower-collection__title {
+        font-size: 5.4vw;
+        margin-bottom: 3vh;
+    }
+
+    .flower-collection__grid {
+        width: 72vw;
+        grid-template-columns: 1fr;
+        gap: 4vw;
+    }
+
+    .flower-slot {
+        border-radius: 4.5vw;
+    }
+
+    .flower-slot__number {
+        top: 1.8vw;
+        left: 1.8vw;
+        width: 8vw;
+        height: 8vw;
+        font-size: 4.5vw;
+    }
+
+    .flower-slot__placeholder {
+        width: 68%;
+        height: 68%;
+        inset: 16%;
+    }
+
+    .flower-collection__status {
+        width: 72vw;
+        min-height: 10vw;
+        margin-top: 3vh;
+        font-size: 4.2vw;
+        border-radius: 999px;
+    }
+
+    .saved-flower__stem {
+        width: 10%;
+        bottom: 24%;
+    }
+
+    .saved-flower__bud {
+        width: 26%;
+        bottom: 43%;
+    }
+
+    .saved-flower__pot {
+        width: 40%;
+        bottom: 0;
+    }
+
+    .saved-flower__leaf {
+        width: 22%;
+        bottom: 25%;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+    .saved-flower__stem {
+        width: 10%;
+        bottom: 23%;
+    }
+
+    .saved-flower__bud {
+        width: 34%;
+        bottom: 47%;
+    }
+
+    .saved-flower__pot {
+        width: 44%;
+        bottom: 0;
+    }
+
+    .saved-flower__leaf {
+        width: 22%;
+        bottom: 25%;
+    }
+
+    .saved-flower__leaf--left.saved-flower__leaf--type-1 {
+        transform: translateX(-120%);
+    }
+
+    .saved-flower__leaf--right.saved-flower__leaf--type-1 {
+        transform: translateX(20%) scaleX(-1);
+    }
+
+    .saved-flower__leaf--left.saved-flower__leaf--type-2 {
+        transform: translateX(-105%);
+    }
+
+    .saved-flower__leaf--right.saved-flower__leaf--type-2 {
+        transform: translateX(5%) scaleX(-1);
+    }
+
+    .saved-flower__leaf--left.saved-flower__leaf--type-3 {
+        transform: translateX(-88%);
+    }
+
+    .saved-flower__leaf--right.saved-flower__leaf--type-3 {
+        transform: translateX(-2%) scaleX(-1);
+    }
+
+    .saved-flower__stem {
+        position: absolute;
+        left: 50%;
+        bottom: 15%;
+        width: 15%;
+        height: auto;
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+
+    .saved-flower__stem--2 {
+        width: 2.5%;
+        bottom: 15%;
+    }
+
+    .saved-flower__leaf {
+        position: absolute;
+        bottom: 26%;
+        width: 20%;
+        height: auto;
+        z-index: 2;
+    }
+
+    .saved-flower__leaf--left {
+        left: 50%;
+        bottom: 30%;
+        transform: translateX(-100%);
+    }
+
+    .saved-flower__leaf--right {
+        left: 50%;
+        bottom: 20%;
+        transform: translateX(0%) scaleX(-1);
+    }
+
+    .saved-flower__leaf--left.saved-flower__leaf--type-3 {
+        left: 50%;
+        bottom: 30%;
+        transform: translateX(-92%);
+    }
+
+    .saved-flower__leaf--right.saved-flower__leaf--type-3 {
+        left: 50%;
+        bottom: 20%;
+        transform: translateX(-8%) scaleX(-1);
+    }
+
+    .saved-flower__leaf--left.saved-flower__leaf--type-1 {
+        left: 48%;
+        bottom: 30%;
+        transform: translateX(-92%);
+    }
+
+    .saved-flower__leaf--right.saved-flower__leaf--type-1 {
+        left: 52%;
+        bottom: 20%;
+        transform: translateX(-8%) scaleX(-1);
+    }
+}
+
+@media (max-width: 767px) {
+    .saved-flower__stem {
+        width: 9%;
+        bottom: 22%;
+    }
+
+    .saved-flower__bud {
+        width: 23%;
+        bottom: 40%;
+    }
+
+    .saved-flower__pot {
+        width: 46%;
+        bottom: 0;
+    }
+
+    .saved-flower__leaf {
+        width: 21%;
+        bottom: 24%;
+    }
+
+    .saved-flower__leaf--left.saved-flower__leaf--type-1 {
+        transform: translateX(-112%);
+    }
+
+    .saved-flower__leaf--right.saved-flower__leaf--type-1 {
+        transform: translateX(12%) scaleX(-1);
+    }
+
+    .saved-flower__leaf--left.saved-flower__leaf--type-2 {
+        transform: translateX(-98%);
+    }
+
+    .saved-flower__leaf--right.saved-flower__leaf--type-2 {
+        transform: translateX(0%) scaleX(-1);
+    }
+
+    .saved-flower__leaf--left.saved-flower__leaf--type-3 {
+        transform: translateX(-82%);
+    }
+
+    .saved-flower__leaf--right.saved-flower__leaf--type-3 {
+        transform: translateX(-6%) scaleX(-1);
+    }
+
+    .saved-flower__leaf--right.saved-flower__leaf--type-3 {
+        transform: translateX(-2%) scaleX(-1);
+    }
+
+    .saved-flower__stem {
+        position: absolute;
+        left: 50%;
+        bottom: 15%;
+        width: 14%;
+        height: auto;
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+    
+    .saved-flower__stem--2 {
+        width: 2%;
+        bottom: 15%;
+    }
+
+    .saved-flower__leaf {
+        position: absolute;
+        bottom: 26%;
+        width: 20%;
+        height: auto;
+        z-index: 2;
+    }
+    
+    .saved-flower__leaf--left {
+        left: 50%;
+        bottom: 30%;
+        transform: translateX(-100%);
+    }
+    
+    .saved-flower__leaf--right {
+        left: 50%;
+        bottom: 20%;
+        transform: translateX(0%) scaleX(-1);
+    }
+
+    .saved-flower__leaf--left.saved-flower__leaf--type-3 {
+        left: 50%;
+        bottom: 25%;
+        transform: translateX(-92%);
+    }
+    
+    .saved-flower__leaf--right.saved-flower__leaf--type-3 {
+        left: 50%;
+        bottom: 15%;
+        transform: translateX(-8%) scaleX(-1);
+    }
+}
