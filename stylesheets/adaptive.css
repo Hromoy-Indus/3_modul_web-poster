@@ -479,8 +479,8 @@
     }
 
     .saved-flower__bud {
-        width: 23%;
-        bottom: 40%;
+        width: 35%;
+        bottom: 49%;
     }
 
     .saved-flower__pot {
@@ -525,12 +525,12 @@
         position: absolute;
         left: 50%;
         bottom: 15%;
-        width: 14%;
+        width: 16%;
         height: auto;
         transform: translateX(-50%);
         z-index: 1;
     }
-    
+
     .saved-flower__stem--2 {
         width: 2%;
         bottom: 15%;
@@ -543,13 +543,13 @@
         height: auto;
         z-index: 2;
     }
-    
+
     .saved-flower__leaf--left {
         left: 50%;
         bottom: 30%;
         transform: translateX(-100%);
     }
-    
+
     .saved-flower__leaf--right {
         left: 50%;
         bottom: 20%;
@@ -558,13 +558,317 @@
 
     .saved-flower__leaf--left.saved-flower__leaf--type-3 {
         left: 50%;
-        bottom: 25%;
+        bottom: 31%;
         transform: translateX(-92%);
     }
-    
+
     .saved-flower__leaf--right.saved-flower__leaf--type-3 {
         left: 50%;
-        bottom: 15%;
+        bottom: 21%;
         transform: translateX(-8%) scaleX(-1);
+    }
+
+    .saved-flower__leaf--left.saved-flower__leaf--type-1 {
+        left: 48%;
+        bottom: 32%;
+        transform: translateX(-92%);
+    }
+
+    .saved-flower__leaf--right.saved-flower__leaf--type-1 {
+        left: 52%;
+        bottom: 23%;
+        transform: translateX(-8%) scaleX(-1);
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+    .bouquet-section {
+        margin-top: 7vh;
+    }
+
+    .bouquet-section__title {
+        font-size: 4vw;
+        margin-bottom: 3.5vh;
+    }
+
+    .bouquet {
+        width: 52vw;
+        height: 56vw;
+    }
+
+    .bouquet__vase {
+        width: 36%;
+    }
+}
+
+@media (max-width: 767px) {
+    .bouquet-section {
+        margin-top: 6vh;
+    }
+
+    .bouquet-section__title {
+        font-size: 5.5vw;
+        margin-bottom: 3vh;
+    }
+
+    .bouquet {
+        width: 70vw;
+        height: 78vw;
+    }
+
+    .bouquet__vase {
+        width: 40%;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+    .bouquet-flower {
+        width: 24%;
+        height: 64%;
+    }
+
+    .bouquet-flower__bud {
+        width: 46%;
+        bottom: 46%;
+    }
+
+    .bouquet-flower__leaf {
+        width: 40%;
+        bottom: 25%;
+    }
+
+    .bouquet-flower__stem {
+        width: 18%;
+    }
+
+    .bouquet-flower__stem--2 {
+        width: 9%;
+    }
+}
+
+@media (max-width: 767px) {
+    .bouquet-flower {
+        width: 26%;
+        height: 66%;
+    }
+
+    .bouquet-flower__bud {
+        width: 44%;
+        bottom: 45%;
+    }
+
+    .bouquet-flower__leaf {
+        width: 38%;
+        bottom: 24%;
+    }
+
+    .bouquet-flower__stem {
+        width: 16%;
+    }
+
+    .bouquet-flower__stem--2 {
+        width: 8%;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+    .bouquet-section {
+        margin-top: 7vh;
+    }
+
+    .bouquet-section__title {
+        font-size: 4vw;
+        margin-bottom: 3.5vh;
+    }
+
+    .bouquet {
+        width: 54vw;
+        height: 58vw;
+    }
+
+    .bouquet__vase {
+        width: 35%;
+    }
+
+    .bouquet-flower {
+        width: 22%;
+        height: 44%;
+    }
+
+    .bouquet-flower__stem {
+        width: 22%;
+    }
+
+    .bouquet-flower__stem--2 {
+        width: 4.5%;
+    }
+
+    .bouquet-flower__leaf {
+        width: 36%;
+        bottom: 12%;
+    }
+
+    .bouquet-flower__bud {
+        width: 62%;
+        bottom: 18%;
+    }
+
+    .bouquet-slot--1 {
+        left: 39%;
+        bottom: 28%;
+        transform: translateX(-50%) rotate(-14deg) scale(1.15);
+    }
+
+    .bouquet-slot--2 {
+        left: 45%;
+        bottom: 37%;
+        transform: translateX(-50%) rotate(-7deg) scale(1.15);
+    }
+
+    .bouquet-slot--3 {
+        left: 50%;
+        bottom: 45%;
+        transform: translateX(-50%) rotate(0deg) scale(1.15);
+    }
+
+    .bouquet-slot--4 {
+        left: 55%;
+        bottom: 37%;
+        transform: translateX(-50%) rotate(7deg) scale(1.15);
+    }
+
+    .bouquet-slot--5 {
+        left: 61%;
+        bottom: 28%;
+        transform: translateX(-50%) rotate(14deg) scale(1.15);
+    }
+
+    .bouquet-slot--6 {
+        left: 50%;
+        bottom: 27%;
+        transform: translateX(-50%) rotate(0deg) scale(1.15);
+    }
+}
+
+@media (max-width: 767px) {
+    .bouquet-section {
+        margin-top: 6vh;
+    }
+
+    .bouquet-section__title {
+        font-size: 5.8vw;
+        margin-bottom: 3vh;
+    }
+
+    .bouquet {
+        width: 78vw;
+        height: 88vw;
+    }
+
+    .bouquet__vase {
+        width: 50%;
+    }
+
+    .bouquet-flower {
+        width: 34%;
+        height: 56%;
+    }
+
+    .bouquet-flower__stem {
+        width: 20%;
+    }
+
+    .bouquet-flower__stem--2 {
+        width: 4%;
+    }
+
+    .bouquet-flower__leaf {
+        width: 36%;
+        bottom: 11%;
+    }
+
+    .bouquet-flower__bud {
+        width: 58%;
+        bottom: 17%;
+    }
+
+    .bouquet-slot--1 {
+        left: 39%;
+        bottom: 41%;
+        transform: translateX(-50%) rotate(-12deg) scale(1);
+    }
+
+    .bouquet-slot--2 {
+        left: 45%;
+        bottom: 52%;
+        transform: translateX(-50%) rotate(-6deg) scale(1);
+    }
+
+    .bouquet-slot--3 {
+        left: 50%;
+        bottom: 64%;
+        transform: translateX(-50%) rotate(0deg) scale(1);
+    }
+
+    .bouquet-slot--4 {
+        left: 55%;
+        bottom: 51%;
+        transform: translateX(-50%) rotate(6deg) scale(1);
+    }
+
+    .bouquet-slot--5 {
+        left: 61%;
+        bottom: 41%;
+        transform: translateX(-50%) rotate(12deg) scale(1);
+    }
+
+    .bouquet-slot--6 {
+        left: 50%;
+        bottom: 40%;
+        transform: translateX(-50%) rotate(0deg) scale(1);
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+    .bouquet-face--1 {
+        width: 15vw;
+    }
+
+    .bouquet-face--2 {
+        width: 14vw;
+    }
+
+    .bouquet-face--3 {
+        width: 13vw;
+    }
+
+    .bouquet-face--4 {
+        width: 9vw;
+    }
+
+    .bouquet-face--5 {
+        width: 11vw;
+    }
+}
+
+@media (max-width: 767px) {
+    .bouquet-face--1 {
+        width: 15vw;
+    }
+
+    .bouquet-face--2 {
+        width: 13vw;
+    }
+
+    .bouquet-face--3 {
+        width: 16vw;
+    }
+
+    .bouquet-face--4 {
+        width: 10vw;
+    }
+
+    .bouquet-face--5 {
+        width: 14vw;
     }
 }

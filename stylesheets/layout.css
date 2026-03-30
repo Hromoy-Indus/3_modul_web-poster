@@ -500,3 +500,311 @@ body {
         0 0 1.6vw rgba(255, 196, 0, 0.2);
     cursor: pointer;
 }
+
+.flower-collection__status.is-ready:hover {
+    box-shadow:
+        0 0 1vw rgba(255, 196, 0, 0.8),
+        0 0 2vw rgba(255, 196, 0, 0.4);
+}
+
+.flower-collection__status.is-ready:active {
+    transform: scale(0.96);
+    background: #d39e00;
+    box-shadow:
+        0 0 0.4vw rgba(255, 196, 0, 0.4),
+        0 0 0.8vw rgba(255, 196, 0, 0.2);
+}
+
+/*-------------------------раздел с цветами в вазе------------------------------*/
+
+.bouquet-section {
+    display: none;
+    width: 100%;
+    margin-top: 8vh;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bouquet-section.is-visible {
+    display: flex;
+}
+
+.bouquet-section__title {
+    margin: 0 0 4vh 0;
+    text-align: center;
+    font-family: "Soledago", sans-serif;
+    font-size: 2.4vw;
+    line-height: 1;
+    color: #ffffff;
+}
+
+.bouquet-section__title span {
+    color: #ffc400;
+}
+
+.bouquet {
+    position: relative;
+    width: 38vw;
+    height: 40vw;
+    transform: translateY(-7vw);
+}
+
+.bouquet__flowers {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+}
+
+.bouquet__vase {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 34%;
+    height: auto;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+
+.bouquet-flower {
+    position: absolute;
+    width: 20%;
+    height: 42%;
+    transform-origin: bottom center;
+}
+
+.bouquet-flower__stem {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 25%;
+    height: auto;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.bouquet-flower__stem--2 {
+    width: 5%;
+}
+
+.bouquet-flower__leaf {
+    position: absolute;
+    bottom: 12%;
+    width: 40%;
+    height: auto;
+    z-index: 2;
+}
+
+.bouquet-flower__bud {
+    position: absolute;
+    left: 50%;
+    bottom: 18%;
+    width: 70%;
+    height: auto;
+    transform: translateX(-50%);
+    z-index: 5;
+}
+
+.bouquet-flower__leaf--left.bouquet-flower__leaf--type-1 {
+    left: 30%;
+    transform: translateX(-58%);
+}
+
+.bouquet-flower__leaf--right.bouquet-flower__leaf--type-1 {
+    left: 70%;
+    bottom: 4%;
+    transform: translateX(-42%) scaleX(-1);
+}
+
+.bouquet-flower__leaf--left.bouquet-flower__leaf--type-2 {
+    left: 50%;
+    transform: translateX(-56%);
+}
+
+.bouquet-flower__leaf--right.bouquet-flower__leaf--type-2 {
+    left: 50%;
+    transform: translateX(-44%) scaleX(-1);
+}
+
+.bouquet-flower__leaf--left.bouquet-flower__leaf--type-3 {
+    left: 50%;
+    transform: translateX(-15%);
+}
+
+.bouquet-flower__leaf--right.bouquet-flower__leaf--type-3 {
+    left: 50%;
+    transform: translateX(-76%) scaleX(-1);
+    bottom: 7%;
+}
+
+.bouquet-slot--1 {
+    left: 39%;
+    bottom: 25%;
+    transform: translateX(-50%) rotate(-16deg) scale(1.3);
+    z-index: 2;
+}
+
+.bouquet-slot--2 {
+    left: 45%;
+    bottom: 35%;
+    transform: translateX(-50%) rotate(-8deg) scale(1.3);
+    z-index: 3;
+}
+
+.bouquet-slot--3 {
+    left: 50%;
+    bottom: 45%;
+    transform: translateX(-50%) rotate(0deg) scale(1.3);
+    z-index: 1;
+}
+
+.bouquet-slot--4 {
+    left: 55%;
+    bottom: 35%;
+    transform: translateX(-50%) rotate(8deg) scale(1.3);
+    z-index: 3;
+}
+
+.bouquet-slot--5 {
+    left: 61%;
+    bottom: 25%;
+    transform: translateX(-50%) rotate(16deg) scale(1.3);
+    z-index: 2;
+}
+
+.bouquet-slot--6 {
+    left: 50%;
+    bottom: 25%;
+    transform: translateX(-50%) rotate(0deg) scale(1.3);
+    z-index: 10 !important;
+}
+
+.bouquet-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.bouquet-faces {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.bouquet-face {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 6vw;
+    height: auto;
+    transform: translate(-50%, -50%) rotate(0deg);
+    transform-origin: center;
+    transition:
+        left 2.2s ease-in-out,
+        top 2.2s ease-in-out,
+        transform 2.2s ease-in-out;
+    filter: drop-shadow(0 0 0.6vw rgba(0, 0, 0, 0.25));
+}
+
+.bouquet-face--1 {
+    width: 14vw;
+}
+
+.bouquet-face--2 {
+    width: 13vw;
+}
+
+.bouquet-face--3 {
+    width: 12vw;
+}
+
+.bouquet-face--4 {
+    width: 8vw;
+    z-index: 5;
+}
+
+.bouquet-face--5 {
+    width: 12vw;
+    z-index: 3;
+}
+
+.bouquet__vase {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 34%;
+    height: auto;
+    transform: translateX(-50%);
+    z-index: 3;
+    animation: vase-glow 2.8s ease-in-out infinite;
+}
+
+@keyframes vase-glow {
+    0% {
+        filter:
+            drop-shadow(0 0 0.6vw rgba(255, 210, 80, 0.18)) drop-shadow(0 0 1.2vw rgba(255, 210, 80, 0.10));
+    }
+
+    50% {
+        filter:
+            drop-shadow(0 0 1.2vw rgba(255, 210, 80, 0.35)) drop-shadow(0 0 2.4vw rgba(255, 210, 80, 0.18));
+    }
+
+    100% {
+        filter:
+            drop-shadow(0 0 0.6vw rgba(255, 210, 80, 0.18)) drop-shadow(0 0 1.2vw rgba(255, 210, 80, 0.10));
+    }
+}
+
+.bouquet-flower {
+    position: absolute;
+    width: 20%;
+    height: 42%;
+    transform-origin: bottom center;
+    animation: flower-float 3.6s ease-in-out infinite;
+}
+
+.bouquet-flower {
+    animation: flower-float 3.6s ease-in-out infinite;
+}
+
+@keyframes flower-float {
+    0% {
+        translate: 0 0;
+        rotate: 0deg;
+    }
+
+    50% {
+        translate: 0 -0.7vw;
+        rotate: 0.5deg;
+    }
+
+    100% {
+        translate: 0 0;
+        rotate: 0deg;
+    }
+}
+
+.bouquet-slot--1 {
+    animation-delay: 0s;
+}
+
+.bouquet-slot--2 {
+    animation-delay: .4s;
+}
+
+.bouquet-slot--3 {
+    animation-delay: .8s;
+}
+
+.bouquet-slot--4 {
+    animation-delay: .2s;
+}
+
+.bouquet-slot--5 {
+    animation-delay: .6s;
+}
+
+.bouquet-slot--6 {
+    animation-delay: 1s;
+}
+

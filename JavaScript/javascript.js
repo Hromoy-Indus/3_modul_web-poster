@@ -77,6 +77,17 @@ document.addEventListener("DOMContentLoaded", function () {
         const leftArrow = row.querySelector(".builder-arrow_left");
         const rightArrow = row.querySelector(".builder-arrow_right");
         const colorButtons = row.querySelectorAll(".builder-color");
+        const statusButton = document.querySelector(".flower-collection__status");
+
+        if (statusButton) {
+            statusButton.addEventListener("click", function () {
+                if (savedFlowers.length < maxFlowers) return;
+
+                renderBouquet();
+                showBouquetSection();
+                startBouquetFaces();
+            });
+        }
 
         leftArrow.addEventListener("click", function () {
             builderData[part].currentIndex--;
@@ -262,3 +273,138 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+/*-------------------------раздел с цветами в вазе------------------------------*/
+
+function showBouquetSection() {
+    const bouquetSection = document.querySelector("#bouquet-section");
+
+    if (!bouquetSection) return;
+
+    bouquetSection.classList.add("is-visible");
+}
+
+function getColorImagePath(part, color, index) {
+    if (part === "flower") {
+        return `images/flowers/${color}-flower-${index}.png`;
+    }
+
+    if (part === "stem") {
+        return `images/stems/${color}-stem-${index}.png`;
+    }
+
+    if (part === "leaf") {
+        return `images/leafs/${color}-leaf-${index}.png`;
+    }
+}
+
+const bouquetPositions = [
+    { className: "bouquet-slot--1" },
+    { className: "bouquet-slot--2" },
+    { className: "bouquet-slot--3" },
+    { className: "bouquet-slot--4" },
+    { className: "bouquet-slot--5" },
+    { className: "bouquet-slot--6" }
+];
+
+function renderBouquet() {
+    const bouquetFlowers = document.querySelector("#bouquet-flowers");
+
+    if (!bouquetFlowers) return;
+
+    bouquetFlowers.innerHTML = "";
+
+    savedFlowers.forEach(function (flower, index) {
+        const position = bouquetPositions[index];
+
+        if (!position) return;
+
+        const flowerElement = document.createElement("div");
+        flowerElement.className = `bouquet-flower ${position.className}`;
+
+        flowerElement.innerHTML = `
+            <img class="bouquet-flower__stem ${flower.stem.index === 2 ? 'bouquet-flower__stem--2' : ''}" 
+                 src="${getColorImagePath("stem", flower.stem.color, flower.stem.index)}" alt="">
+
+            <img class="bouquet-flower__leaf bouquet-flower__leaf--left bouquet-flower__leaf--type-${flower.leaf.index}" 
+                 src="${getColorImagePath("leaf", flower.leaf.color, flower.leaf.index)}" alt="">
+
+            <img class="bouquet-flower__leaf bouquet-flower__leaf--right bouquet-flower__leaf--type-${flower.leaf.index}" 
+                 src="${getColorImagePath("leaf", flower.leaf.color, flower.leaf.index)}" alt="">
+
+            <img class="bouquet-flower__bud" 
+                 src="${getColorImagePath("flower", flower.flower.color, flower.flower.index)}" alt="">
+        `;
+
+        bouquetFlowers.appendChild(flowerElement);
+    });
+}
+
+function startBouquetFaces() {
+    const bouquetSection = document.querySelector("#bouquet-section");
+    const bouquet = bouquetSection.querySelector(".bouquet");
+    const faces = bouquetSection.querySelectorAll(".bouquet-face");
+
+    if (!bouquetSection || !bouquet || !faces.length) return;
+    if (bouquetSection.dataset.facesStarted === "true") return;
+
+    bouquetSection.dataset.facesStarted = "true";
+
+    const zones = [
+        { minX: 8, maxX: 24, minY: 16, maxY: 42 },
+        { minX: 72, maxX: 90, minY: 14, maxY: 38 },
+        { minX: 8, maxX: 26, minY: 44, maxY: 78 },
+        { minX: 66, maxX: 86, minY: 38, maxY: 66 },
+        { minX: 82, maxX: 96, minY: 48, maxY: 82 }
+    ];
+
+    function moveFace(face, zone) {
+        const sectionRect = bouquetSection.getBoundingClientRect();
+        const bouquetRect = bouquet.getBoundingClientRect();
+
+        const bouquetCenterX = bouquetRect.left + bouquetRect.width / 2;
+        const bouquetCenterY = bouquetRect.top + bouquetRect.height / 2;
+
+        const randomXPercent = zone.minX + Math.random() * (zone.maxX - zone.minX);
+        const randomYPercent = zone.minY + Math.random() * (zone.maxY - zone.minY);
+
+        const x = sectionRect.width * randomXPercent / 100;
+        const y = sectionRect.height * randomYPercent / 100;
+
+        const faceCenterX = sectionRect.left + x;
+        const faceCenterY = sectionRect.top + y;
+
+        let angle = Math.atan2(
+            bouquetCenterY - faceCenterY,
+            bouquetCenterX - faceCenterX
+        ) * 180 / Math.PI;
+
+        if (angle > 90) {
+            angle -= 180;
+        }
+
+        if (angle < -90) {
+            angle += 180;
+        }
+
+        angle = angle * 0.35;
+
+        face.style.left = `${randomXPercent}%`;
+        face.style.top = `${randomYPercent}%`;
+        face.style.transform = `translate(-50%, -50%) rotate(${angle}deg)`;
+
+        const nextDelay = 1400 + Math.random() * 1400;
+
+        setTimeout(function () {
+            moveFace(face, zone);
+        }, nextDelay);
+    }
+
+    faces.forEach(function (face, index) {
+        const zone = zones[index];
+
+        setTimeout(function () {
+            moveFace(face, zone);
+        }, index * 200);
+    });
+}
