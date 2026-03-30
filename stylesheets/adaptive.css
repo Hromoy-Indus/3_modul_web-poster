@@ -872,3 +872,272 @@
         width: 14vw;
     }
 }
+
+@media (max-width: 1023px) and (min-width: 768px) {
+    .bouquet-delivery {
+        margin-top: 4vh;
+    }
+
+    .bouquet-delivery__button {
+        padding: 1.8vw 7vw;
+        font-size: 2.4vw;
+    }
+
+    .delivery-modal__window {
+        width: 54vw;
+        padding: 3vw;
+        border-radius: 2vw;
+    }
+
+    .delivery-modal__text {
+        font-size: 2.3vw;
+        margin-bottom: 2vw;
+    }
+
+    .delivery-modal__close {
+        padding: 1.2vw 4vw;
+        font-size: 2vw;
+    }
+}
+
+@media (max-width: 767px) {
+    .bouquet-delivery {
+        margin-top: 3.5vh;
+    }
+
+    .bouquet-delivery__button {
+        padding: 3vw 9vw;
+        font-size: 4vw;
+    }
+
+    .delivery-modal {
+        padding: 4vw;
+        box-sizing: border-box;
+    }
+
+    .delivery-modal__window {
+        width: 84vw;
+        padding: 5vw;
+        border-radius: 4vw;
+    }
+
+    .delivery-modal__text {
+        font-size: 4.2vw;
+        line-height: 1.4;
+        margin-bottom: 4vw;
+    }
+
+    .delivery-modal__close {
+        padding: 2.8vw 7vw;
+        font-size: 3.8vw;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+    .bouquet-hint {
+        margin: 4vh 0;
+        font-size: 3vw;
+    }
+}
+
+@media (max-width: 767px) {
+    .bouquet-hint {
+        margin: 3.5vh 0;
+        font-size: 4.5vw;
+        line-height: 1.4;
+        padding: 0 6vw;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+    .emotion-panel {
+        gap: 5vh;
+    }
+
+    .emotion-panel__top,
+    .emotion-panel__bottom {
+        gap: 10vw;
+    }
+
+    .emotion-ball {
+        width: 22vw;
+        height: 22vw;
+    }
+
+    .emotion-eyes {
+        width: 28vw;
+    }
+
+    .emotion-eye {
+        width: 12vw;
+        height: 12vw;
+    }
+
+    .emotion-eye+.emotion-eye {
+        margin-left: -1.2vw;
+    }
+
+    .emotion-panel__name {
+        font-size: 7vw;
+    }
+
+    .emotion-panel__meta {
+        font-size: 2.8vw;
+    }
+}
+
+@media (max-width: 767px) {
+    .emotion-panel {
+        gap: 4.5vh;
+    }
+
+    .emotion-panel__top,
+    .emotion-panel__bottom {
+        gap: 7vw;
+    }
+
+    .emotion-ball {
+        width: 26vw;
+        height: 26vw;
+    }
+
+    .emotion-eyes {
+        width: 32vw;
+    }
+
+    .emotion-eye {
+        width: 14vw;
+        height: 14vw;
+    }
+
+    .emotion-eye+.emotion-eye {
+        margin-left: -1.5vw;
+    }
+
+    .emotion-panel__name {
+        font-size: 8.5vw;
+    }
+
+    .emotion-panel__meta {
+        font-size: 3.8vw;
+        padding: 0 4vw;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+
+    .emotion-ball {
+        width: 22vw;
+        height: 22vw;
+    }
+
+    .emotion-ball--1 {
+        top: 6vh;
+        left: 4vw;
+    }
+
+    .emotion-ball--2 {
+        top: 6vh;
+        right: 4vw;
+    }
+
+    .emotion-ball--3 {
+        top: 42vh;
+        left: 4vw;
+    }
+
+    .emotion-ball--4 {
+        top: 42vh;
+        right: 4vw;
+    }
+
+    .emotion-eyes {
+        top: 24vh;
+        width: 26vw;
+    }
+
+    .emotion-eye {
+        width: 12vw;
+        height: 12vw;
+    }
+
+    .emotion-panel__name {
+        font-size: 10vw;
+    }
+
+    .emotion-panel__meta {
+        font-size: 3vw;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .emotion-ball {
+        width: 30vw;
+        height: 30vw;
+    }
+
+    .emotion-ball--1 { top: 6vh; left: 3vw; }
+    .emotion-ball--2 { top: 6vh; right: 3vw; }
+    .emotion-ball--3 { top: 48vh; left: 3vw; }
+    .emotion-ball--4 { top: 48vh; right: 3vw; }
+
+    .emotion-eyes {
+        top: 28vh;
+        width: 36vw;
+    }
+
+    .emotion-eye {
+        width: 16vw;
+        height: 16vw;
+    }
+
+    .emotion-panel__name {
+        font-size: 12vw;
+    }
+
+    .emotion-panel__meta {
+        font-size: 4vw;
+    }
+
+    .emotion-panel__text {
+        bottom: 1vh;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+    .emotion-panel__name {
+        font-size: 7vw;
+        line-height: 0.9;
+        margin-bottom: 2vh;
+        text-shadow:
+            0 0 0.5vw rgba(255, 255, 255, 0.45),
+            0 0 1vw rgba(255, 255, 255, 0.18);
+    }
+}
+
+@media (max-width: 767px) {
+    .emotion-panel__name {
+        font-size: 8vw;
+        line-height: 0.9;
+        margin-bottom: 1.5vh;
+        text-shadow:
+            0 0 0.4vw rgba(255, 255, 255, 0.4),
+            0 0 0.8vw rgba(255, 255, 255, 0.16);
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+    .emotion-panel__text {
+        bottom: 3vh;
+    }
+}
+
+@media (max-width: 767px) {
+    .emotion-panel__text {
+        bottom: 2vh;
+    }
+}

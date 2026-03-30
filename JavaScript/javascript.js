@@ -86,6 +86,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 renderBouquet();
                 showBouquetSection();
                 startBouquetFaces();
+
+                const bouquetHint = document.querySelector("#bouquet-hint");
+
+                if (bouquetHint) {
+                    bouquetHint.classList.add("is-hidden");
+                }
             });
         }
 
@@ -406,5 +412,89 @@ function startBouquetFaces() {
         setTimeout(function () {
             moveFace(face, zone);
         }, index * 200);
+    });
+}
+
+/*-------------------------раздел с 4 эмоциями и глазами------------------------------*/
+
+const emotionBalls = document.querySelectorAll(".emotion-ball");
+
+emotionBalls.forEach(function (ball) {
+    const image = ball.querySelector(".emotion-ball__image");
+
+    if (!image) return;
+
+    ball.addEventListener("click", function () {
+        image.src = image.dataset.color;
+        ball.classList.add("is-active");
+    });
+});
+
+
+document.addEventListener("mousemove", function (e) {
+    const eyes = document.querySelectorAll(".emotion-eye");
+
+    eyes.forEach(function (eye) {
+        const orbit = eye.querySelector(".emotion-eye__orbit");
+        const rect = eye.getBoundingClientRect();
+
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+
+        const angle = Math.atan2(e.clientY - centerY, e.clientX - centerX) * 180 / Math.PI;
+
+        orbit.style.transform = "translate(-50%, -50%) rotate(" + (angle - 90) + "deg)";
+    });
+});
+
+
+document.addEventListener("mousemove", function (e) {
+    emotionBalls.forEach(function (ball) {
+        if (!ball.classList.contains("is-active")) return;
+
+        const rect = ball.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+
+        let angle = Math.atan2(e.clientY - centerY, e.clientX - centerX) * 180 / Math.PI;
+
+        if (angle > 90) {
+            angle -= 180;
+        }
+
+        if (angle < -90) {
+            angle += 180;
+        }
+
+        angle = angle * 0.22;
+
+        const image = ball.querySelector(".emotion-ball__image");
+        if (image) {
+            image.style.transform = "rotate(" + angle + "deg)";
+        }
+    });
+});
+
+const deliveryButton = document.querySelector(".bouquet-delivery__button");
+const deliveryModal = document.querySelector("#delivery-modal");
+const deliveryClose = document.querySelector(".delivery-modal__close");
+
+if (deliveryButton && deliveryModal) {
+    deliveryButton.addEventListener("click", function () {
+        deliveryModal.classList.add("is-visible");
+    });
+}
+
+if (deliveryClose && deliveryModal) {
+    deliveryClose.addEventListener("click", function () {
+        deliveryModal.classList.remove("is-visible");
+    });
+}
+
+if (deliveryModal) {
+    deliveryModal.addEventListener("click", function (event) {
+        if (event.target === deliveryModal) {
+            deliveryModal.classList.remove("is-visible");
+        }
     });
 }
